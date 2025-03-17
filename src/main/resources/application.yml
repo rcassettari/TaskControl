@@ -1,0 +1,31 @@
+server:
+  port: 8081
+
+#spring:
+#  application:
+#    name: TaskControl
+
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/task_control
+#    username: app_user
+#    password: my_password
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+spring:
+  application:
+    name: TaskControl
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/task_control?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: app_user
+    password: my_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: none  # Pode ser 'create', 'update', 'validate' ou 'none'
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
